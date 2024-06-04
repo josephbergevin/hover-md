@@ -9,13 +9,23 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "hover-md.helloWorld",
         "title": "Hello World"
+      }
+    ],
+    "languages": [
+      {
+        "id": "markdown",
+        "extensions": [
+          ".md"
+        ]
       }
     ]
   },
@@ -42,6 +52,10 @@
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "@vscode/test-cli": "^0.0.9",
+    "vscode": "^1.1.0",
     "@vscode/test-electron": "^2.3.9"
+  },
+  "dependencies": {
+    "apigee": "0.0.1"
   }
 }
